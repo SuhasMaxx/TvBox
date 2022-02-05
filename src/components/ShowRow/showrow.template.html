@@ -1,0 +1,7 @@
+<div class="show-row-block">
+    <h2 class="genre-title">{{showList.genre}}</h2>
+    <div class="show-row-container">
+        <show-block v-for="show in showList.showList" :showDetails="show"></show-block>
+    </div>
+    
+</div>

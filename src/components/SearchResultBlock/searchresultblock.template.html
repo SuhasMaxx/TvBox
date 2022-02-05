@@ -1,0 +1,12 @@
+<div class="search-result-block" @click="gotoShowDetails()">
+    <div class="show-image">
+        <img v-if="showDetails.image" :src="showDetails.image.medium" class="show-img" :title="showDetails.name"/>
+    </div>
+    <div class="show-details">
+        <h2>{{showDetails.name}}</h2>
+    </div>
+    <!-- <label>{{showDetails.name}}</label><br/>
+    <label>Network : {{showDetails.network.name}}</label><br/>
+    <label>Rating: {{showDetails.rating.average}}</label> -->
+    
+</div>

@@ -1,0 +1,7 @@
+<div>
+    <nav-bar :showHomebutton="true"></nav-bar>
+    <div v-if="showDetails" class="show-details-container">
+        <h1>{{showDetails.name}}</h1>
+        <img v-if="showDetails.image && showDetails.image.original" :src="showDetails.image.original" class="show-img" :title="showDetails.name"/>
+    </div>
+</div>

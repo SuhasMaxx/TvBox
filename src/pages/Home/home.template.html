@@ -1,0 +1,17 @@
+<div class="home">
+    <div v-if="spinning">
+        <div class="shimmer shimmer-title"></div>
+        <div class="shimmer shimmer-row"></div><br/>
+        <div class="shimmer shimmer-title"></div>
+        <div class="shimmer shimmer-row"></div><br/>
+        <div class="shimmer shimmer-title"></div>
+        <div class="shimmer shimmer-row"></div><br/>
+        <div class="shimmer shimmer-title"></div>
+        <div class="shimmer shimmer-row"></div>
+    </div>
+    <div class="search"></div>
+    <!-- <div v-if="topShowsList && topShowsList.length && !loading">SHOWS FOUND!!!</div> -->
+    <div class="show-rows-container">
+        <show-row v-if="topShowsList && topShowsList.length" v-for="(showList, index) in topShowsList" v-bind:key="showList.genre" :showList="showList">{{showList.genre}}</show-row>
+    </div>
+</div>
