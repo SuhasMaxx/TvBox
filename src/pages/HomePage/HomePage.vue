@@ -1,4 +1,4 @@
-<template src="./home.template.html"></template>
+<template src="./homepage.template.html"></template>
 <script>
 import ShowRow from "../../components/ShowRow/ShowRow.vue";
 import {TvMazeService} from '../../services/tvmaze.service.ts';
@@ -39,4 +39,4 @@ export default {
   }
 }
 </script>
-<style src="./home.style.css" scoped></style>
+<style src="./homepage.style.css" scoped></style>

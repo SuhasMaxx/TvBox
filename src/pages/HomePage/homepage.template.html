@@ -5,6 +5,6 @@
     </div>
     <div class="search"></div>
     <div class="show-rows-container">
-        <show-row v-if="topShowsList && topShowsList.length" v-for="(showList, index) in topShowsList" v-bind:key="showList.genre" :showList="showList">{{showList.genre}}</show-row>
+        <show-row v-if="topShowsList && topShowsList.length" v-for="(showList, index) in topShowsList" v-bind:key="showList.genre" :showListData="showList">{{showList.genre}}</show-row>
     </div>
 </div>

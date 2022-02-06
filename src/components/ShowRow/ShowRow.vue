@@ -13,17 +13,22 @@ export default {
         FontAwesomeIcon
     },
     props: {
-        showList: Object
+        showListData: {
+          type: Object,
+          default: null
+        }
     },
     data() {
       return {
         innerStyles: {},
         transitioning: false,
         step: '',
-        disableNavBtns: false
+        disableNavBtns: false,
+        showList: {}
       }
     },
     mounted(){
+      this.showList = {...this.showListData};
       this.setStep();
       this.resetTranslate();
     },

@@ -1,5 +1,4 @@
-<template src="./search.template.html" ></template>
-<style src="./search.style.css" scoped></style>
+<template src="./searchpage.template.html" ></template>
 <script>
 import {TvMazeService} from '../../services/tvmaze.service.ts';
 import SearchResultBlock from '../../components/SearchResultBlock/SearchResultBlock.vue';
@@ -14,6 +13,13 @@ import TvAlert from '../../components/TvAlert/TvAlert.vue';
  * @class Search
  */
 export default {
+	components: {
+			SearchResultBlock,
+			TvButton,
+			NavBar,
+			Spinner,
+			TvAlert
+	},
 	data(){
 		return {
 			loading: false,
@@ -21,13 +27,6 @@ export default {
 			searchResult: [],
 			errorMsg: ''
 		}
-	},
-	components: {
-			SearchResultBlock,
-			TvButton,
-			NavBar,
-			Spinner,
-			TvAlert
 	},
 	methods: {
 		async searchShows(){
@@ -54,3 +53,4 @@ export default {
 	}
 }
 </script>
+<style src="./searchpage.style.css" scoped></style>

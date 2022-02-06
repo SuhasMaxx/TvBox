@@ -1,11 +1,11 @@
-import Home from './pages/Home/Home.vue';
-import Search from './pages/Search/Search.vue';
+import HomePage from './pages/HomePage/HomePage.vue';
+import SearchPage from './pages/SearchPage/SearchPage.vue';
 import ShowDetails from './pages/ShowDetails/ShowDetails.vue';
 import { createRouter, createWebHashHistory } from 'vue-router'
 
 export const routes = [
-  { path: '/', component: Home },
-  { path: '/search', component: Search },
+  { path: '/', component: HomePage },
+  { path: '/search', component: SearchPage },
   { path: '/show/:id', component: ShowDetails },
 ]
 

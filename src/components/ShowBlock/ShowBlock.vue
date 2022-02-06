@@ -7,7 +7,10 @@
  */
 export default {
     props: {
-        showDetails: Object
+        showDetails: {
+            type: Object,
+            default: null
+        }
     },
     mounted(){
         // this.getData();
