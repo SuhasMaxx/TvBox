@@ -1,13 +1,8 @@
 .show-block{
-    /* padding: 1em; */
-    margin: 1em 0 1em 1em;
-    /* border: 2px solid grey; */
+    margin: 1.2em 0 1em 1em;
     max-width: 300px;
-    display: inline-block;
+    display: inline-flex;
     color: var(--rich-black-fogra-39);
-    /* border-radius: 5px;
-    background-color: var(--light-gray);
-    box-shadow: 0px 0px 10px 2px var(--silver-chalice); */
     cursor: pointer;
 }
 

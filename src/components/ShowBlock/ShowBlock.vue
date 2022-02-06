@@ -1,5 +1,4 @@
 <template src="./showblock.template.html" />
-<style src="./showblock.style.css" scoped></style>
 <script>
 /**
  * Small show block with show info on Home page
@@ -14,9 +13,10 @@ export default {
         // this.getData();
     },
     methods: {
-        navigateToShow(event){
+        navigateToShow(){
             this.$router.push('/show/'+this.showDetails.id)
         }
     }
 }
 </script>
+<style src="./showblock.style.css" scoped></style>

@@ -1,7 +1,26 @@
 <div>
-    <nav-bar :showHomebutton="true"></nav-bar>
-    <div v-if="showDetails" class="show-details-container">
-        <h1>{{showDetails.name}}</h1>
-        <img v-if="showDetails.image && showDetails.image.original" :src="showDetails.image.original" class="show-img" :title="showDetails.name"/>
+    <div class="background-blur" :style="blurBackStyle"></div>
+    <div class="main-content">
+        <nav-bar :showHomebutton="true"></nav-bar>
+        <div v-if="showDetails" class="show-details-container">
+            <div class="detail-col">
+                <img v-if="showDetails.image && showDetails.image.original" :src="showDetails.image.original" class="show-img" :title="showDetails.name"/>
+                <no-image v-if="!showDetails.image" class="large"></no-image>
+            </div>
+            <div class="show-info-block detail-col">
+                <h1>{{showDetails.name}}</h1>
+                <tv-badges :showDetails="showDetails"></tv-badges>
+                <div><b>Network:</b> {{showDetails.network.name}} ({{showDetails.network.country.code}})</div>
+                <div class="summary" v-html="showDetails.summary"></div>
+                <div class="cast"><b>Cast: </b>
+                    <span v-for="(cast, index) in showDetails?._embedded?.cast">
+                        <a v-bind:href="cast.person.url" v-bind:title="getCastCharString(cast.character.name)">{{cast.person.name}} </a>
+                        <span v-if="index+1 < showDetails._embedded.cast.length">&nbsp;|&nbsp;</span>
+                    </span>
+                </div> 
+                <div class="cast">{{showDetails.cast}}</div>
+            </div>
+        </div>
     </div>
+    
 </div>

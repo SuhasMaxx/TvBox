@@ -1,6 +1,7 @@
 "use strict";
 const { VueLoaderPlugin } = require("vue-loader");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 const webpack = require('webpack');
 
 module.exports = {
@@ -45,6 +46,10 @@ module.exports = {
       inject: true,
     }),
   ],
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
+  },
   devServer: {
     compress: true,
     port: 8080,

@@ -1,19 +1,31 @@
 <template>
-  <div class="full-width">
-    <h1 class="banner">
-      <router-link to="/" title="Home"><font-awesome-icon class="brand-icon" :icon="['fas', 'film']" /> TV Box</router-link>
-    </h1>
-    <div class="search-btn"><router-link to="/search" title="search"><font-awesome-icon :icon="['fas', 'search']" /></router-link></div>
-    <router-view></router-view>
+  <div class="app-container">
+    <tv-banner></tv-banner>
+    <div class="content">
+      <router-view></router-view>
+    </div>
   </div>
-  
 </template>
-<style src="./style.css" scoped></style>
-<script>
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-export default {
-  components:{
-    FontAwesomeIcon
-  }
+
+<style scoped>
+.content {
+  padding-top: 60px;
 }
+</style>
+
+<script>
+import TvBanner from "./components/TvBanner/TvBanner.vue";
+/**
+ * TVBox main component
+ * The Application shows information about TV shows, fetched from the TV MAze API (https://api.tvmaze.com). On home page user can see top TV shows from each genre.
+ * The app als features Search page where user can search by typing text. A fuzzy algorithm is used (with a fuzziness value of 2), meaning that shows will be found even if your query contains small typos
+ * Every search result is clickable and it takes you to show details page, where you can find more infomration about the show
+ *
+ * @class TvBoxApp
+ */
+export default {
+  components: {
+    TvBanner,
+  },
+};
 </script>

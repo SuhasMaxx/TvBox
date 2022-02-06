@@ -1,75 +1,42 @@
-.search{
-    text-align: center;
+.search {
+  text-align: center;
 }
 
-.search-field{
-    text-align: center;
-    padding: 0.5em;
+.search-field {
+  text-align: center;
+  padding: 0.5em;
 }
 
-.search-result{
-    text-align: center;
-    margin: 1em
+.search-field input {
+  line-height: 1.5;
+  width: 300px;
+  border-radius: 5px;
+  margin: 0.5em;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
-.result-blocks-container{
-    max-width: 500px;
+.search-field input[type="button"] {
+  width: 100px;
 }
 
-.search-field input{
-    height: 3em;
-    line-height: 2.5em;
-    width: 300px;
-    border-radius: 5px;
-    margin: 0.5em;
-    padding-left: 0.5em;
+.notification{
+  width: 100%;
+  text-align: center;
 }
 
-.search-field input[type="button"]{
-    width: 100px;
-}   
-
-.loading-spinner{
-    text-align: center;
-    padding: 1em;
+.error-msg{
+  display: inline-block;
 }
 
-.lds-grid {
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 80px;
-  }
-  .lds-grid div {
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: #fff;
-    animation: lds-grid 1.2s linear infinite;
-  }
-  .lds-grid div:nth-child(1) {
-    top: 8px;
-    left: 8px;
-    animation-delay: 0s;
-  }
-  .lds-grid div:nth-child(2) {
-    top: 8px;
-    left: 32px;
-    animation-delay: -0.4s;
-  }
-  .lds-grid div:nth-child(3) {
-    top: 8px;
-    left: 56px;
-    animation-delay: -0.8s;
-  }
-  
-  @keyframes lds-grid {
-    0%, 100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.5;
-    }
-  }
-  
+.search-result {
+  text-align: center;
+  margin: 1em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.result-blocks-container {
+  min-width: 500px;
+}

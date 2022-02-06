@@ -4,28 +4,14 @@
         <slot></slot>
     </div>
 </template>
-<style scoped>
-    .nav a{
-        font-size: 2em;
-        color: white;
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-    }
-    .nav a .nav-label{
-        font-size: 0.7em;
-        margin-left: 0.2em;
-        cursor: pointer;
-    }
-</style>
 <script>
 export default({
-    setup() {
-        
-    },
     props: {
         showHomebutton: Boolean,
-        backPage: String
+        backPage: {
+            type: String,
+            default: ''
+        }
     },
     methods:{
         goBack() {
@@ -34,3 +20,26 @@ export default({
     }
 })
 </script>
+
+<style scoped>
+    .nav {
+        margin: 0.5em;
+    }
+    .nav a{
+        font-size: 1.5em;
+        color: var(--cultured);
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        transition: all .2s ease-in-out;
+        font-weight: bold;
+    }
+    .nav a:hover{
+        color: white;
+    }
+    .nav a .nav-label{
+        font-size: 0.7em;
+        margin-left: 0.2em;
+        cursor: pointer;
+    }
+</style>

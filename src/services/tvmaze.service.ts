@@ -1,7 +1,7 @@
 const API_BASE_URL = "https://api.tvmaze.com";
 let allShowsData: any = null;
 let genreList = null;
-const SHOWS_PER_GENRE_RESULT = 10;
+const SHOWS_PER_GENRE_RESULT = 20;
 
 const fetchAllShows = async () => {
   const showData = await fetch(API_BASE_URL + "/shows");
@@ -83,7 +83,7 @@ const searchTVShows = async (searchStr) => {
 };
 
 const getShowDetails = async (showId) => {
-  const showData = await fetch(API_BASE_URL + "/shows/" + showId);
+  const showData = await fetch(API_BASE_URL + "/shows/" + showId + '?embed[]=episodes&embed[]=cast');
   const searchResult = await showData.json();
   console.log(searchResult);
   return searchResult;
