@@ -1,14 +1,20 @@
 <div class="search">
-    <nav-bar :showHomebutton="true"></nav-bar>
-    <div class="search-field">
-        <input type="text" v-model="searchString" v-on:keyup.enter="onEnter"/>
-        <tv-button @click="searchShows()">Search</tv-button>
+  <nav-bar :showHomebutton="true"></nav-bar>
+  <div class="search-field">
+    <input type="text" v-model="searchString" v-on:keyup.enter="onEnter" />
+    <tv-button @click="searchShows()">Search</tv-button>
+  </div>
+  <tv-spinner v-if="loading"></tv-spinner>
+  <div class="notification">
+    <tv-alert class="error-msg" :msg="errorMsg"></tv-alert>
+  </div>
+  <div class="search-result">
+    <div
+      v-if="!loading && searchResult?.length"
+      v-for="show in searchResult"
+      class="result-blocks-container"
+    >
+      <search-result-block :showDetails="show.show"></search-result-block>
     </div>
-    <tv-spinner v-if="loading"></tv-spinner>
-    <div class="notification"> <tv-alert class="error-msg" :msg="errorMsg"></tv-alert></div>
-    <div class="search-result">
-        <div v-if="!loading && searchResult?.length" v-for="show in searchResult" class="result-blocks-container">
-            <search-result-block :showDetails="show.show"></search-result-block>
-        </div>
-    </div>
+  </div>
 </div>

@@ -1,3 +1,9 @@
 <div class="show-block">
-    <img v-if="showDetails.image" :src="showDetails.image.medium" @click="navigateToShow()" class="show-img" :title="showDetails.name"/>    
+  <img
+    v-if="showDetails.image"
+    :src="showDetails.image.medium"
+    @click="navigateToShow()"
+    class="show-img"
+    :title="showDetails.name"
+  />
 </div>

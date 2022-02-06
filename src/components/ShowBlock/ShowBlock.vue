@@ -6,20 +6,20 @@
  * @class ShowBlock
  */
 export default {
-    props: {
-        showDetails: {
-            type: Object,
-            default: null
-        }
+  props: {
+    showDetails: {
+      type: Object,
+      default: null,
     },
-    mounted(){
-        // this.getData();
+  },
+  mounted() {
+    // this.getData();
+  },
+  methods: {
+    navigateToShow() {
+      this.$router.push("/show/" + this.showDetails.id);
     },
-    methods: {
-        navigateToShow(){
-            this.$router.push('/show/'+this.showDetails.id)
-        }
-    }
-}
+  },
+};
 </script>
 <style src="./showblock.style.css" scoped></style>

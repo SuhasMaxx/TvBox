@@ -1,9 +1,17 @@
 <template>
   <div class="color-info-blocks">
-    <label v-if="showDetails.rating.average" class="rating" title="Ratings">★ {{ showDetails.rating.average }}</label>
-    <label v-if="showDetails.premiered" class="year" title="Premiered on">{{premierYear}}</label>
-    <label v-if="showDetails.language" class="language" title="Language">{{showDetails.language}}</label>
-    <label v-if="showDetails.runtime" class="runtime" title="Runtime">{{ showDetails.runtime }} mins</label>
+    <label v-if="showDetails.rating.average" class="rating" title="Ratings"
+      >★ {{ showDetails.rating.average }}</label
+    >
+    <label v-if="showDetails.premiered" class="year" title="Premiered on">{{
+      premierYear
+    }}</label>
+    <label v-if="showDetails.language" class="language" title="Language">{{
+      showDetails.language
+    }}</label>
+    <label v-if="showDetails.runtime" class="runtime" title="Runtime"
+      >{{ showDetails.runtime }} mins</label
+    >
   </div>
 </template>
 <script>
@@ -13,8 +21,8 @@ export default {
   props: {
     showDetails: {
       type: Object,
-      default: null
-    }
+      default: null,
+    },
   },
   computed: {
     premierYear: function () {

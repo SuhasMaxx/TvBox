@@ -1,34 +1,34 @@
-.genre-title{
-    color: var(--cultured);
-    margin-left: 1em;
-    margin-bottom: 0.5em;
-    margin-bottom: 0em;
+.genre-title {
+  color: var(--cultured);
+  margin-left: 1em;
+  margin-bottom: 0.5em;
+  margin-bottom: 0em;
 }
 
-.show-row-container{
-    width: 100%;
-    overflow-x: auto;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+.show-row-container {
+  width: 100%;
+  overflow-x: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .show-row-container::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
-.show-blocks-container{
-    transition: transform 0.2s;
-    white-space: nowrap;
+.show-blocks-container {
+  transition: transform 0.2s;
+  white-space: nowrap;
 }
 
-.showSlider{
-    margin-left: 1em;
-    margin-right: 1em;
-    cursor: pointer;
-    color: var(--light-gray);
+.showSlider {
+  margin-left: 1em;
+  margin-right: 1em;
+  cursor: pointer;
+  color: var(--light-gray);
 }
 
-.navigators{
-    display: flex;
-    justify-content: space-between;
+.navigators {
+  display: flex;
+  justify-content: space-between;
 }

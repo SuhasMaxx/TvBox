@@ -83,11 +83,13 @@ const searchTVShows = async (searchStr) => {
 };
 
 const getShowDetails = async (showId) => {
-  const showData = await fetch(API_BASE_URL + "/shows/" + showId + '?embed[]=episodes&embed[]=cast');
+  const showData = await fetch(
+    API_BASE_URL + "/shows/" + showId + "?embed[]=episodes&embed[]=cast"
+  );
   const searchResult = await showData.json();
   console.log(searchResult);
   return searchResult;
-}
+};
 
 export const TvMazeService = {
   getTopTVShows,

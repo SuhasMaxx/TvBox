@@ -1,7 +1,7 @@
 <template src="./homepage.template.html"></template>
 <script>
 import ShowRow from "../../components/ShowRow/ShowRow.vue";
-import {TvMazeService} from '../../services/tvmaze.service.ts';
+import { TvMazeService } from "../../services/tvmaze.service.ts";
 
 /**
  * TV Box homepage component
@@ -11,32 +11,32 @@ import {TvMazeService} from '../../services/tvmaze.service.ts';
  */
 export default {
   components: {
-    ShowRow
+    ShowRow,
   },
   /**
    * Sets default page mode to "Search"
    */
   data() {
     return {
-      selectedMode: 'Search',
+      selectedMode: "Search",
       spinning: true,
-      topShowsList: []
-    }
+      topShowsList: [],
+    };
   },
-  created(){
-    this.topShowsList= [];
+  created() {
+    this.topShowsList = [];
   },
-  
+
   mounted() {
     this.spinning = true;
     setTimeout(() => this.loadTopTenShows(), 500);
   },
   methods: {
-    async loadTopTenShows(){
+    async loadTopTenShows() {
       this.topShowsList = await TvMazeService.getTopTVShows();
       this.spinning = false;
-    }
-  }
-}
+    },
+  },
+};
 </script>
 <style src="./homepage.style.css" scoped></style>

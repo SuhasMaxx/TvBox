@@ -1,12 +1,19 @@
 <div class="show-row-block">
-    <h2 class="genre-title">{{showList.genre}}</h2>
-    <div class="show-row-container">
-        <div class="show-blocks-container" ref="sliderRow" :style="innerStyles">   
-            <show-block v-for="show in showList.showList" :showDetails="show"></show-block>
-        </div>
+  <h2 class="genre-title">{{showList.genre}}</h2>
+  <div class="show-row-container">
+    <div class="show-blocks-container" ref="sliderRow" :style="innerStyles">
+      <show-block
+        v-for="show in showList.showList"
+        :showDetails="show"
+      ></show-block>
     </div>
-    <div class="navigators" v-if="!disableNavBtns">
-        <div class="showSlider left" @click="scrollLeft"><font-awesome-icon class="brand-icon" :icon="['fas', 'chevron-left']" /></div>
-        <div class="showSlider right" @click="scrollRight"><font-awesome-icon class="brand-icon" :icon="['fas', 'chevron-right']" /></div>
+  </div>
+  <div class="navigators" v-if="!disableNavBtns">
+    <div class="showSlider left" @click="scrollLeft">
+      <font-awesome-icon class="brand-icon" :icon="['fas', 'chevron-left']" />
     </div>
+    <div class="showSlider right" @click="scrollRight">
+      <font-awesome-icon class="brand-icon" :icon="['fas', 'chevron-right']" />
+    </div>
+  </div>
 </div>

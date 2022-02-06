@@ -21,12 +21,12 @@
   width: 100px;
 }
 
-.notification{
+.notification {
   width: 100%;
   text-align: center;
 }
 
-.error-msg{
+.error-msg {
   display: inline-block;
 }
 

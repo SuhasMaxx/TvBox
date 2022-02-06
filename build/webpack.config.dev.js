@@ -2,7 +2,7 @@
 const { VueLoaderPlugin } = require("vue-loader");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
-const webpack = require('webpack');
+const webpack = require("webpack");
 
 module.exports = {
   mode: "development",
@@ -35,7 +35,7 @@ module.exports = {
       {
         test: /\.ts$/,
         use: "ts-loader",
-      }
+      },
     ],
   },
   plugins: [

@@ -1,19 +1,27 @@
 <div class="search-result-block" @click="gotoShowDetails()">
-    <div class="show-image">
-        <img v-if="showDetails.image" :src="showDetails.image.medium" class="show-img" :title="showDetails.name"/>
-        <no-image v-if="!showDetails.image"></no-image>
+  <div class="show-image">
+    <img
+      v-if="showDetails.image"
+      :src="showDetails.image.medium"
+      class="show-img"
+      :title="showDetails.name"
+    />
+    <no-image v-if="!showDetails.image"></no-image>
+  </div>
+  <div class="show-details">
+    <h2>{{showDetails.name}}</h2>
+    <tv-badges :showDetails="showDetails"></tv-badges>
+    <div v-if="showDetails.network">
+      <b>Network:</b> {{showDetails.network.name}}
+      ({{showDetails.network.country.code}})
     </div>
-    <div class="show-details">
-        <h2>{{showDetails.name}}</h2>
-        <tv-badges :showDetails="showDetails"></tv-badges>
-        <div v-if="showDetails.network"><b>Network:</b> {{showDetails.network.name}} ({{showDetails.network.country.code}})</div>
-        <div class="genres" v-if="showDetails.genres?.length">
-            <b>Genre: </b>
-            <span v-for="(genre,index) in showDetails.genres">
-                {{genre}}
-                <span v-if="index+1 < showDetails.genres.length">&nbsp;|&nbsp;</span>
-            </span>
-        </div>
-        <div v-if="showDetails.type"><b>Type: </b>{{showDetails.type}}</div>
+    <div class="genres" v-if="showDetails.genres?.length">
+      <b>Genre: </b>
+      <span v-for="(genre,index) in showDetails.genres">
+        {{genre}}
+        <span v-if="index+1 < showDetails.genres.length">&nbsp;|&nbsp;</span>
+      </span>
     </div>
+    <div v-if="showDetails.type"><b>Type: </b>{{showDetails.type}}</div>
+  </div>
 </div>
