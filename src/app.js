@@ -5,7 +5,7 @@ import './assets/css/global.css'
 
 import FontAwesomeIcon from './utils/FontAwesomeIcon.js';
 
-const app = createApp(TvBoxApp)
+createApp(TvBoxApp)
 .component("font-awesome-icon", FontAwesomeIcon)
 .use(router)
 .mount('#app')

@@ -7,6 +7,9 @@
     </div>
   </div>
 </template>
+<script>
+	export default {};
+</script>
 <style scoped>
 	.loading-spinner {
 		text-align: center;
@@ -54,6 +57,4 @@
 		}
 	}
 </style>
-<script>
-	export default {};
-</script>
+

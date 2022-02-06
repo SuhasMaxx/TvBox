@@ -1,6 +1,6 @@
 <template src="./showdetails.template.html">
 </template>
-<style src="./showdetails.style.css"></style>
+
 <script>
 import { useRoute } from 'vue-router';
 import NavBar from '../../components/NavBar/NavBar.vue';
@@ -17,8 +17,6 @@ import NoImage from '../../components/NoImage/NoImage.vue';
  * @class Home
  */
 export default{
-    props: {
-    },
     components: {
         FontAwesomeIcon,
         NavBar,
@@ -26,12 +24,20 @@ export default{
         NoImage
     },
     mixins: [UtilsMixins],
+    props: {
+    },
     data() {
         return {
             showId: 0,
             showDetails: null,
             blurBackStyle: {}
         }
+    },
+    computed: {
+        premierYear: function () {
+            return this.getYear(this.showDetails.premiered)
+        },
+
     },
     mounted(){
         const route = useRoute();
@@ -45,12 +51,7 @@ export default{
                 "background-image": `url('${this.showDetails.image.original}')`
             }
         },
-    },
-    computed: {
-        premierYear: function () {
-            return this.getYear(this.showDetails.premiered)
-        },
-
     }
 }
 </script>
+<style src="./showdetails.style.css"></style>

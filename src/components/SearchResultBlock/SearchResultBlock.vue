@@ -15,7 +15,10 @@ export default {
     },
     mixins: [UtilsMixins],
     props: {
-        showDetails: Object
+        showDetails: {
+            type: Object,
+            default: null
+        }
     },
     computed: {
         premierYear: function () {

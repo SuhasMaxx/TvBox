@@ -9,7 +9,7 @@
     "build": "webpack",
     "build2": "webpack --config build/webpack.config.dev.js",
     "dev2": "webpack-dev-server --config build/webpack.config.dev.js",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitingonre --fix src",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
     "format": "prettier . --write"
   },
   "author": "Suhas Sanmukh",

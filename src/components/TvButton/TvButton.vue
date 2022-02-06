@@ -26,11 +26,4 @@
         background-color: var(--ruby-red);
     }
 </style>
-<script>
 
-export default({
-    setup() {
-        
-    },
-})
-</script>

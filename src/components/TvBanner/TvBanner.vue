@@ -13,6 +13,14 @@
     </div>
   </div>
 </template>
+<script>
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+export default {
+  components: {
+    FontAwesomeIcon,
+  },
+};
+</script>
 <style scoped>
 .banner {
   margin: 0px;
@@ -52,11 +60,4 @@
   }
 }
 </style>
-<script>
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-export default {
-  components: {
-    FontAwesomeIcon,
-  },
-};
-</script>
+

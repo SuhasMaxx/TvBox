@@ -4,7 +4,7 @@ import {TvMazeService} from '../../services/tvmaze.service.ts';
 import SearchResultBlock from '../../components/SearchResultBlock/SearchResultBlock.vue';
 import TvButton from '../../components/TvButton/TvButton.vue';
 import NavBar from '../../components/NavBar/NavBar.vue';
-import Spinner from '../../components/Spinner/Spinner.vue';
+import TvSpinner from '../../components/TvSpinner/TvSpinner.vue';
 import TvAlert from '../../components/TvAlert/TvAlert.vue';
 /**
  * TV Box search page component
@@ -17,7 +17,7 @@ export default {
 			SearchResultBlock,
 			TvButton,
 			NavBar,
-			Spinner,
+			TvSpinner,
 			TvAlert
 	},
 	data(){

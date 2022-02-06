@@ -7,12 +7,6 @@
   </div>
 </template>
 
-<style scoped>
-.content {
-  padding-top: 60px;
-}
-</style>
-
 <script>
 import TvBanner from "./components/TvBanner/TvBanner.vue";
 /**
@@ -29,3 +23,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.content {
+  padding-top: 60px;
+}
+</style>

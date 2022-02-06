@@ -1,18 +1,21 @@
 <template>
   <div class="color-info-blocks">
-    <label class="rating" v-if="showDetails.rating.average" title="Ratings">★ {{ showDetails.rating.average }}</label>
-    <label class="year" v-if="showDetails.premiered" title="Premiered on">{{premierYear}}</label>
-    <label class="language" v-if="showDetails.language" title="Language">{{showDetails.language}}</label>
-    <label class="runtime" v-if="showDetails.runtime" title="Runtime">{{ showDetails.runtime }} mins</label>
+    <label v-if="showDetails.rating.average" class="rating" title="Ratings">★ {{ showDetails.rating.average }}</label>
+    <label v-if="showDetails.premiered" class="year" title="Premiered on">{{premierYear}}</label>
+    <label v-if="showDetails.language" class="language" title="Language">{{showDetails.language}}</label>
+    <label v-if="showDetails.runtime" class="runtime" title="Runtime">{{ showDetails.runtime }} mins</label>
   </div>
 </template>
 <script>
 import { UtilsMixins } from "../../utils/utils.mixin.js";
 export default {
-  props: {
-    showDetails: Object,
-  },
   mixins: [UtilsMixins],
+  props: {
+    showDetails: {
+      type: Object,
+      default: null
+    }
+  },
   computed: {
     premierYear: function () {
       return this.getYear(this.showDetails.premiered);

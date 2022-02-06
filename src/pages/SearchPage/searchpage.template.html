@@ -4,7 +4,7 @@
         <input type="text" v-model="searchString" v-on:keyup.enter="onEnter"/>
         <tv-button @click="searchShows()">Search</tv-button>
     </div>
-    <spinner v-if="loading"></spinner>
+    <tv-spinner v-if="loading"></tv-spinner>
     <div class="notification"> <tv-alert class="error-msg" :msg="errorMsg"></tv-alert></div>
     <div class="search-result">
         <div v-if="!loading && searchResult?.length" v-for="show in searchResult" class="result-blocks-container">

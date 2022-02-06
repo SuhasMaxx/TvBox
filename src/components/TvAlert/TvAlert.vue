@@ -1,9 +1,58 @@
 <template>
-    <div v-if="currentMsg" v-bind:class="classObject">
+    <div v-if="currentMsg" :class="classObject">
         {{currentMsg}}
-        <div @click="closeAlert" class="close">✖</div>
+        <div class="close" @click="closeAlert">✖</div>
     </div>
 </template>
+
+<script>
+export default {
+    props: {
+        type: {
+            type: String,
+            default: 'error'
+        },
+        msg : {
+            type: String,
+            default: ''
+        },
+        showClose: {
+            type: Boolean,
+            default: true
+        }
+    },
+    setup() {
+        
+    },
+    data(){
+        return {
+            currentMsg: ''
+        }
+    },
+    computed: {
+        classObject: function () {
+            return {
+                error: this.type === "error",
+                success: this.type === "success",
+                notify: this.type === "notify=ication",
+                container: true
+            }
+        },
+    },
+    watch: {
+        // whenever question changes, this function will run
+        msg: function (newMsg) {
+        this.currentMsg = newMsg;
+        }
+    },
+    methods: {
+        closeAlert(){
+            this.currentMsg = "";
+        }
+    }
+}
+</script>
+
 <style scoped>
     .container{
         padding: 1em;
@@ -37,50 +86,3 @@
         background-color: #cff4fc;
     }
 </style>
-<script>
-export default {
-    setup() {
-        
-    },
-    props: {
-        type: {
-            type: String,
-            default: 'error'
-        },
-        msg : {
-            type: String,
-            default: ''
-        },
-        showClose: {
-            type: Boolean,
-            default: true
-        }
-    },
-    data(){
-        return {
-            currentMsg: ''
-        }
-    },
-    watch: {
-        // whenever question changes, this function will run
-        msg: function (newMsg) {
-        this.currentMsg = newMsg;
-        }
-    },
-    methods: {
-        closeAlert(){
-            this.currentMsg = "";
-        }
-    },
-    computed: {
-        classObject: function () {
-            return {
-                error: this.type === "error",
-                success: this.type === "success",
-                notify: this.type === "notify=ication",
-                container: true
-            }
-        },
-    }
-}
-</script>
