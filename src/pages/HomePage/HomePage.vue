@@ -1,7 +1,7 @@
 <template src="./homepage.template.html"></template>
 <script>
 import ShowRow from "../../components/ShowRow/ShowRow.vue";
-import { TvMazeService } from "../../services/tvmaze.service.ts";
+import { TvMazeService } from "../../services/tvmaze.service.js";
 
 /**
  * TV Box homepage component
@@ -29,7 +29,7 @@ export default {
 
   mounted() {
     this.spinning = true;
-    setTimeout(() => this.loadTopTenShows(), 500);
+    setTimeout(() => this.loadTopTenShows(), 200);
   },
   methods: {
     async loadTopTenShows() {

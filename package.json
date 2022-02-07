@@ -5,10 +5,8 @@
   "main": "index.html",
   "scripts": {
     "test": "jest --env=jsdom",
-    "dev": "webpack-dev-server",
-    "build": "webpack",
-    "build2": "webpack --config build/webpack.config.dev.js",
-    "dev2": "webpack-dev-server --config build/webpack.config.dev.js",
+    "build": "webpack --config build_scripts/webpack.config.dev.js",
+    "dev": "webpack-dev-server --config build_scripts/webpack.config.dev.js",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
     "format": "prettier . --write"
   },

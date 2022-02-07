@@ -3,15 +3,22 @@ const { VueLoaderPlugin } = require("vue-loader");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const webpack = require("webpack");
+const path = require('path')
 
 module.exports = {
   mode: "development",
   entry: ["./src/app.js"],
+  output: {
+    path: path.resolve(__dirname, '../dist'),
+  },
   module: {
     rules: [
       {
         test: /\.vue$/,
-        use: "vue-loader",
+        loader: "vue-loader",
+        options: {
+          esModule: true
+        }
       },
       {
         test: /\.css$/,
@@ -29,12 +36,15 @@ module.exports = {
         use: ["css-loader", "stylus-loader"],
       },
       {
-        test: /\.js$/,
+        test: /^.+\\.js$/,
         use: "babel-loader",
       },
       {
-        test: /\.ts$/,
-        use: "ts-loader",
+        test: /^.+\\.ts$/,
+        loader: "ts-loader",
+        options: {
+          appendTsSuffixTo: [/\.vue$/]
+        }
       },
     ],
   },
@@ -57,5 +67,5 @@ module.exports = {
   devServer: {
     compress: true,
     port: 8080,
-  },
+  }
 };

@@ -15,7 +15,7 @@
       <div class="show-info-block detail-col">
         <h1>{{showDetails.name}}</h1>
         <tv-badges :showDetails="showDetails"></tv-badges>
-        <div>
+        <div v-if="showDetails.network">
           <b>Network:</b> {{showDetails.network.name}}
           ({{showDetails.network.country.code}})
         </div>

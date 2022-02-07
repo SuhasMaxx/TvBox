@@ -1,6 +1,6 @@
 <template src="./searchpage.template.html"></template>
 <script>
-import { TvMazeService } from "../../services/tvmaze.service.ts";
+import { TvMazeService } from "../../services/tvmaze.service.js";
 import SearchResultBlock from "../../components/SearchResultBlock/SearchResultBlock.vue";
 import TvButton from "../../components/TvButton/TvButton.vue";
 import NavBar from "../../components/NavBar/NavBar.vue";
