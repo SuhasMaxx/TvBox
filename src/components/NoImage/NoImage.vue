@@ -13,7 +13,7 @@ export default {};
   display: inline-block;
 }
 .large {
-  height: 800px;
-  width: 600px;
+  height: 600px;
+  width: 100%;
 }
 </style>

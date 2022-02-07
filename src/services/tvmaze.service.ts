@@ -21,13 +21,11 @@ const generateGenreList = () => {
       });
     }
   });
-  console.log(genreList);
 };
 
 const buildGenreWiseShowList = () => {
   var showList = [];
   showList = genreList.map((genre) => generateMapList(genre));
-  console.log(showList);
   return showList;
 };
 

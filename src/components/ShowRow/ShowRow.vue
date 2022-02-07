@@ -35,8 +35,8 @@ export default {
   methods: {
     setStep() {
       const innerWidth = this.$refs.sliderRow.scrollWidth;
-      this.step = `${innerWidth / 20}px`;
-      if (this.showList.showList.length < 10) {
+      this.step= "136px";
+      if (this.showList.showList.length * 136 < innerWidth) {
         this.disableNavBtns = true;
       }
     },

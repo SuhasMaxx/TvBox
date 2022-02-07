@@ -40,3 +40,10 @@
 .result-blocks-container {
   min-width: 500px;
 }
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .result-blocks-container {
+    min-width: auto;
+  }
+}
