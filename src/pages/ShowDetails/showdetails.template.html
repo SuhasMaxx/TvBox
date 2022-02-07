@@ -19,6 +19,12 @@
           <b>Network:</b> {{showDetails.network.name}}
           ({{showDetails.network.country.code}})
         </div>
+        <div v-if="showDetails.type">
+          <b>Type:</b> {{showDetails.type}}
+        </div>
+        <div v-if="showDetails.officialSite">
+          <b>Official Website:</b> <a :href="showDetails.officialSite">{{showDetails.name || 'Click here'}}</a>
+        </div>
         <div class="summary" v-html="showDetails.summary"></div>
         <div class="cast">
           <b>Cast: </b>
@@ -33,7 +39,12 @@
             >
           </span>
         </div>
-        <div class="cast">{{showDetails.cast}}</div>
+        <div v-if="showDetails._embedded?.episodes.length">
+          <b>Total Espisodes: </b>{{showDetails._embedded?.episodes.length}}
+        </div>
+        <div v-if="showDetails.runtime" class="runtime" title="Runtime">
+          <b>Average Runtime: </b>{{ showDetails.averageRuntime }} mins
+        </div>
       </div>
     </div>
   </div>

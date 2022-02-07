@@ -45,6 +45,10 @@
   color: var(--light-gray);
 }
 
+a{
+  color: var(--light-gray);
+}
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .show-details-container {

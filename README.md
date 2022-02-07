@@ -46,3 +46,8 @@ The contents in `dist` folder are production ready and can be deployed to any ht
 `npm run test`
 ```
 
+## Upcoming features
+- Episode info on show Details page
+- Cast pictures on Show details page
+- latest updates page
+- Shows media gallery page ( Posters, background, Typography )
