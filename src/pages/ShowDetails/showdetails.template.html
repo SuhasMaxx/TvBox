@@ -23,8 +23,8 @@
           <b>Type:</b> {{showDetails.type}}
         </div>
         <div v-if="showDetails.genres && showDetails.genres.length">
-          <b> Genres :</b> 
-          <span v-for='(genre, index) in showDetails.genres'>{{genre}}<span v-if="index+1 < showDetails.genres.length"
+          <b> Genres:</b> 
+          <span v-for='(genre, index) in showDetails.genres'>&nbsp;{{genre}}<span v-if="index+1 < showDetails.genres.length"
             >&nbsp;|&nbsp;</span></span>
             
         </div>
