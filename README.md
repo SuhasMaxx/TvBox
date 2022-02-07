@@ -8,29 +8,41 @@ A front-end app to show TV shows info, schedule and more. The app fetches show i
 - Search for your favourite shows
 - Show details page with big poster
 - Show cast info with character names ( as tooltip )
+- Mobile friendly UI
 
 ## Technical stack
 - Vue 3
 - Pure Responsive CSS ( no framework )
 - Font Awesome for icons
-- Manual webpack configuration ( no vue-cli )
-- Unit test via Jest
+- Manual [Webpack 5](https://webpack.js.org/) configuration ( no vue-cli )
+- Unit tests via [Jest](https://jestjs.io/)
 
 ## Installation
 
 ### Pre-requisites
 - Node JS ( Latest Stable Release ) Download and install from https://nodejs.org/en/
 
-### Setup
+## Setup
 - Checkout the code using git:  `git clone <repository url>`
 - Open `terminal` ( on Mac ) or `cmd` ( on WIndows )
 - Navigate to the checked out directory
 - Run `npm install`
 - Done!
 
-### Compile and run the Local Server
-Run `npm run dev`
+## Compile and run the Local Server ( support hot reload )
+```
+`npm run dev`
+```
+Local server will run on `http://localhost:8080/`
 
-### Build for Production
-Run `npm run build`
+## Build for Production
+```
+`npm run build`
+```
 The contents in `dist` folder are production ready and can be deployed to any http server
+
+## Run unit tests
+```
+`npm run test`
+```
+
