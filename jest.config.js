@@ -6,8 +6,11 @@ module.exports = {
       'vue'
     ],
     "moduleDirectories": ["node_modules", "bower_components", "shared"],
-    transform: {},
-    transformIgnorePatterns: ['/node_modules/(?!@vue/test-utils)'],
+    transform: {
+      "^.+\\.js$": "babel-jest",
+      ".*\\.(vue)$": "@vue/vue3-jest"
+    },
+    transformIgnorePatterns: ['/node_modules/(?!(@vue/test-utils)/)'],
     moduleNameMapper: {
       '^@/(.*)$': '<rootDir>/src/$1'
     },
@@ -15,6 +18,13 @@ module.exports = {
       '**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)',
       '**/**.test.js'
     ],
-    testEnvironment: 'jest-environment-node'
+    testEnvironment: 'jest-environment-node',
+    globals: {
+      'vue-jest': {
+        compilerOptions: {
+          isCustomElement: (tag) => tag.startsWith('font-'),
+        },
+      },
+    }
   }
   
