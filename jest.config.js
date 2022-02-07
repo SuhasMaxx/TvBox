@@ -5,13 +5,9 @@ module.exports = {
       'json',
       'vue'
     ],
-    transform: {
-      "^.+\\.js$": "babel-jest",
-      ".*\\.(vue)$": "@vue/vue3-jest"
-    },
-    transformIgnorePatterns: [
-        '/node_modules/'
-      ],
+    "moduleDirectories": ["node_modules", "bower_components", "shared"],
+    transform: {},
+    transformIgnorePatterns: ['/node_modules/(?!@vue/test-utils)'],
     moduleNameMapper: {
       '^@/(.*)$': '<rootDir>/src/$1'
     },
@@ -19,6 +15,6 @@ module.exports = {
       '**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)',
       '**/**.test.js'
     ],
-    testEnvironment: 'jsdom'
+    testEnvironment: 'jest-environment-node'
   }
   
