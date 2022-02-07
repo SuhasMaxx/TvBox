@@ -2,6 +2,8 @@
 
 A front-end app to show TV shows info, schedule and more. The app fetches show information from TV Maze API ( https://www.tvmaze.com/api ) and shows top shows of each genre on the home page. You can click on any show to get more infomration about the show. The app also has a search page where  you can type and search for a show.
 
+You can see output of this app hosted on : https://suhassanmukh.com/submodules/tv-box/
+
 ## Features
 - Home page page shows top shows from each Genre ( maximum 20 ). User can click on any show and go to its details page. Each genre list is scrollable and has navigation buttons.
 - Click on show to get more information
