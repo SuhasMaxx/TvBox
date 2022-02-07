@@ -29,6 +29,7 @@ export default {
 
   mounted() {
     this.spinning = true;
+    /* manual timeout to check shimmer */
     setTimeout(() => this.loadTopTenShows(), 200);
   },
   methods: {

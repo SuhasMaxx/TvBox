@@ -2,8 +2,9 @@
 const { VueLoaderPlugin } = require("vue-loader");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const webpack = require("webpack");
-const path = require('path')
+const path = require('path');
 
 module.exports = {
   mode: "development",
@@ -11,6 +12,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../dist'),
   },
+  
   module: {
     rules: [
       {
@@ -45,7 +47,7 @@ module.exports = {
         options: {
           appendTsSuffixTo: [/\.vue$/]
         }
-      },
+      }
     ],
   },
   plugins: [
@@ -59,6 +61,10 @@ module.exports = {
       __VUE_OPTIONS_API__: true,
       __VUE_PROD_DEVTOOLS__: false,
     }),
+    new CopyWebpackPlugin({
+      patterns: [
+      { from: 'src/assets/images/favicon.png', to: 'favicon.png'}
+    ]})
   ],
   optimization: {
     minimize: true,
