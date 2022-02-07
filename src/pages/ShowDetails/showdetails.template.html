@@ -22,6 +22,12 @@
         <div v-if="showDetails.type">
           <b>Type:</b> {{showDetails.type}}
         </div>
+        <div v-if="showDetails.genres && showDetails.genres.length">
+          <b> Genres :</b> 
+          <span v-for='(genre, index) in showDetails.genres'>{{genre}}<span v-if="index+1 < showDetails.genres.length"
+            >&nbsp;|&nbsp;</span></span>
+            
+        </div>
         <div v-if="showDetails.officialSite">
           <b>Official Website:</b> <a :href="showDetails.officialSite">{{showDetails.name || 'Click here'}}</a>
         </div>
