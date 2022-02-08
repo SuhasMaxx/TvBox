@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TvBadges.vue render the component 1`] = `
+<div
+  class="color-info-blocks"
+>
+  <label
+    class="rating"
+    title="Ratings"
+  >
+    ★ 8.5
+  </label>
+  <label
+    class="year"
+    title="Premiered on"
+  >
+    2011
+  </label>
+  <label
+    class="language"
+    title="Language"
+  >
+    English
+  </label>
+  <label
+    class="runtime"
+    title="Runtime"
+  >
+    60 mins
+  </label>
+</div>
+`;

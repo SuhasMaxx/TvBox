@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShowRow.vue render the component 1`] = `
+<div
+  class="show-row-block"
+>
+  <h2
+    class="genre-title"
+  />
+  <div
+    class="show-row-container"
+  >
+    <div
+      class="show-blocks-container"
+    >
+      
+      
+    </div>
+  </div>
+  <div
+    class="navigators"
+  >
+    <div
+      class="showSlider left"
+    >
+      <font-awesome-icon
+        class="brand-icon"
+        icon="fas,chevron-left"
+      />
+    </div>
+    <div
+      class="showSlider right"
+    >
+      <font-awesome-icon
+        class="brand-icon"
+        icon="fas,chevron-right"
+      />
+    </div>
+  </div>
+</div>
+`;

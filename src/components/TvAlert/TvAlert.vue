@@ -38,7 +38,6 @@ export default {
     },
   },
   watch: {
-    // whenever question changes, this function will run
     msg: function (newMsg) {
       this.currentMsg = newMsg;
     },

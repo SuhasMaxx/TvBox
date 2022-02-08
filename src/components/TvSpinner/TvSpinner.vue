@@ -1,6 +1,6 @@
 <template>
   <div class="loading-spinner">
-    <div class="lds-grid">
+    <div class="dots">
       <div></div>
       <div></div>
       <div></div>
@@ -17,37 +17,37 @@ export default {};
   widows: 100%;
 }
 
-.lds-grid {
+.dots {
   display: inline-block;
   position: relative;
   width: 80px;
   height: 80px;
 }
-.lds-grid div {
+.dots div {
   position: absolute;
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background: #fff;
-  animation: lds-grid 1.2s linear infinite;
+  animation: glowFade 1.2s linear infinite;
 }
-.lds-grid div:nth-child(1) {
+.dots div:nth-child(1) {
   top: 8px;
   left: 8px;
   animation-delay: 0s;
 }
-.lds-grid div:nth-child(2) {
+.dots div:nth-child(2) {
   top: 8px;
   left: 32px;
   animation-delay: -0.4s;
 }
-.lds-grid div:nth-child(3) {
+.dots div:nth-child(3) {
   top: 8px;
   left: 56px;
   animation-delay: -0.8s;
 }
 
-@keyframes lds-grid {
+@keyframes glowFade {
   0%,
   100% {
     opacity: 1;

@@ -4,9 +4,9 @@ import { UtilsMixins } from "../../utils/utils.mixin.js";
 import TvBadges from "../TvBadges/TvBadges.vue";
 import NoImage from "../NoImage/NoImage.vue";
 /**
- * Small show block with show info on Home page
+ * Small show block with show info on Search page
  *
- * @class ShowBlock
+ * @class SearchResultBlock
  */
 export default {
   components: {

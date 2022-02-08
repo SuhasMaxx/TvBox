@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchResultBlock.vue render the component 1`] = `
+<div
+  class="search-result-block"
+>
+  <div
+    class="show-image"
+  >
+    <img
+      class="show-img"
+      src="https://static.tvmaze.com/uploads/images/medium_portrait/69/174906.jpg"
+      title="Grimm"
+    />
+    <!--v-if-->
+  </div>
+  <div
+    class="show-details"
+  >
+    <h2>
+      Grimm
+    </h2>
+    <tv-badges-stub
+      showdetails="[object Object]"
+    />
+    <div>
+      <b>
+        Network:
+      </b>
+       NBC (US) 
+    </div>
+    <div
+      class="genres"
+    >
+      <b>
+        Genre: 
+      </b>
+      
+      <span>
+        Drama 
+        <span>
+           | 
+        </span>
+      </span>
+      <span>
+        Crime 
+        <span>
+           | 
+        </span>
+      </span>
+      <span>
+        Supernatural 
+        <!--v-if-->
+      </span>
+      
+    </div>
+    <div>
+      <b>
+        Type: 
+      </b>
+      Scripted
+    </div>
+  </div>
+</div>
+`;
